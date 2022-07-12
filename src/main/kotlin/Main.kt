@@ -1,6 +1,7 @@
 object Main {
     @JvmStatic
     fun main(args: Array<String>) {
-        println(reverseSeq(5))
+        println(include(intArrayOf(1,2,3), 1))
+        println(include(intArrayOf(1,2,3), 4))
     }
 }

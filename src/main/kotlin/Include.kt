@@ -1,0 +1,1 @@
+fun include(arr: IntArray, item : Int) = item in arr
