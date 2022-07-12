@@ -1,7 +1,7 @@
 object Main {
     @JvmStatic
     fun main(args: Array<String>) {
-        println(include(intArrayOf(1,2,3), 1))
-        println(include(intArrayOf(1,2,3), 4))
+        println(checkForFactor(20, 2))
+        println(checkForFactor(9, 2))
     }
 }
