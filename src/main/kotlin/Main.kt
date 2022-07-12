@@ -1,8 +1,8 @@
 object Main {
     @JvmStatic
     fun main(args: Array<String>) {
-        println(opposite(32))
-        println(opposite(-14))
-        println(opposite(321312312))
+        println(litres(3.0))
+        println(litres(6.7))
+        println(litres(11.8))
     }
 }
