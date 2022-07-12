@@ -1,6 +1,8 @@
 object Main {
     @JvmStatic
     fun main(args: Array<String>) {
-        println(past(0, 1, 1))
+        println(opposite(32))
+        println(opposite(-14))
+        println(opposite(321312312))
     }
 }

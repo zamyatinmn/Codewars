@@ -1,0 +1,1 @@
+fun opposite(number: Int) = (number xor -1) + 1
