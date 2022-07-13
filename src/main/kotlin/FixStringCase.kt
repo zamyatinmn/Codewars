@@ -11,12 +11,6 @@ solve("coDE") = "code". Upper == lowercase. Change all to lowercase.*/
 
 object FixStringCase {
 
-    fun solve(s: String): String {
-        var count = 0
-        s.forEach {
-            if (it.isLowerCase()) count-- else count++
-        }
-        return if (count <= 0) s.lowercase() else s.uppercase()
-    }
+    fun solve(s: String) = if (s.count(Char::isUpperCase) > s.length / 2) s.uppercase() else s.lowercase()
 
 }
