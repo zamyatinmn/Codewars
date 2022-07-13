@@ -15,12 +15,5 @@ Example
 wave("hello") => []string{"Hello", "hEllo", "heLlo", "helLo", "hellO"}
 Good luck and enjoy!*/
 
-fun wave(str: String) = mutableListOf<String>().apply {
-    str.forEachIndexed { i, c ->
-        if (c != ' ') {
-            val sb = StringBuilder(str)
-            sb.setCharAt(i, c.uppercaseChar())
-            this.add(sb.toString())
-        }
-    }
-}
+fun wave(str: String) =
+    str.indices.map { str.take(it) + str.drop(it).replaceFirstChar { c -> c.uppercaseChar() } }.filter { it != str }
