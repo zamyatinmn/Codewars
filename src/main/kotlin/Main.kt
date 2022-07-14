@@ -1,9 +1,10 @@
-import rankup.wave
+import rankup.Suite
 
 object Main {
     @JvmStatic
     fun main(args: Array<String>) {
-        println(wave("hello maza faka"))
-        println(wave("    s        a       "))
+        println(Suite.going(5))
+        println(Suite.going(67))
+        println(Suite.going(220))
     }
 }
