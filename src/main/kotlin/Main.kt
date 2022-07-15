@@ -1,10 +1,10 @@
-import rankup.digPow
+import fundamental.getAscii
 
 object Main {
     @JvmStatic
     fun main(args: Array<String>) {
-        println(digPow(89, 1))
-        println(digPow(92, 1))
-        println(digPow(46288, 3))
+        println(getAscii('A'))
+        println(getAscii(' '))
+        println(getAscii('!'))
     }
 }
