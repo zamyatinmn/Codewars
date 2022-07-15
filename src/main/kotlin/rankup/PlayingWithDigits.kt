@@ -27,20 +27,7 @@ digPow(92, 1) should return -1 since there is no k such as 9¹ + 2² equals 92 *
 digPow(695, 2) should return 2 since 6² + 9³ + 5⁴= 1390 = 695 * 2
 digPow(46288, 3) should return 51 since 4³ + 6⁴+ 2⁵ + 8⁶ + 8⁷ = 2360688 = 46288 * 51*/
 
-fun digPow(n: Int, p: Int): Int {
-    var number1 = n
-    var countDigits = 0
-    while (number1 != 0) {
-        countDigits++
-        number1 /= 10
-    }
-
-    var number2 = n
-    var result = 0
-    while (number2 > 0) {
-        result += (number2 % 10).toDouble().pow(p + --countDigits).toInt()
-        number2 /= 10
-    }
-
-    return if (result % n == 0) result / n else -1
-}
+fun digPow(n: Int, p: Int) = n.toString()
+    .mapIndexed { i, c -> c.toString().toDouble().pow(p + i).toInt() }
+    .sum()
+    .let { if (it % n == 0) it / n else -1 }
