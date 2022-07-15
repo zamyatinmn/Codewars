@@ -1,9 +1,5 @@
 package rankup
 
-import java.math.BigDecimal
-import java.math.MathContext
-import kotlin.math.floor
-
 /**
 Consider the following numbers (where n! is factorial(n)):
 
@@ -31,16 +27,6 @@ You could try to simplify the expression.*/
 
 object Suite {
 
-    fun going(n: Int): Double {
-        var factorial = BigDecimal.ONE
-        var sum = BigDecimal.ZERO
-        for (i in 1..n) {
-            factorial = factorial.multiply(BigDecimal.valueOf(i.toLong()))
-            sum += factorial
-        }
-        val divisionRes = BigDecimal.ONE.divide(factorial, MathContext.DECIMAL128)
-        val result = divisionRes.multiply(sum).toDouble()
-        return floor(result * 1000000) / 1000000
-    }
+    fun going(n: Int): Double = if (n == 0) 0.0 else 1 + going(n - 1) / n
 
 }
