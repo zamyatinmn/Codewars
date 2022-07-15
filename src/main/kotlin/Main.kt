@@ -1,10 +1,10 @@
-import rankup.Suite
+import fundamental.evaporator
 
 object Main {
     @JvmStatic
     fun main(args: Array<String>) {
-        println(Suite.going(5))
-        println(Suite.going(67))
-        println(Suite.going(220))
+        println(evaporator(10.0, 10.0, 10.0))
+        println(evaporator(10.0, 10.0, 5.0))
+        println(evaporator(100.0, 5.0, 5.0))
     }
 }
