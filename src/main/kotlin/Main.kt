@@ -1,10 +1,10 @@
-import fundamental.evaporator
+import rankup.digPow
 
 object Main {
     @JvmStatic
     fun main(args: Array<String>) {
-        println(evaporator(10.0, 10.0, 10.0))
-        println(evaporator(10.0, 10.0, 5.0))
-        println(evaporator(100.0, 5.0, 5.0))
+        println(digPow(89, 1))
+        println(digPow(92, 1))
+        println(digPow(46288, 3))
     }
 }
