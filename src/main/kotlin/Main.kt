@@ -1,10 +1,8 @@
-import fundamental.getAscii
+import fundamental.numberToString
 
 object Main {
     @JvmStatic
     fun main(args: Array<String>) {
-        println(getAscii('A'))
-        println(getAscii(' '))
-        println(getAscii('!'))
+        println(numberToString(123))
     }
 }
