@@ -11,14 +11,5 @@ for example, when given size is 3:
 for given example, the return value should be: [[1,2,3],[2,4,6],[3,6,9]]*/
 
 object KataSolution {
-    fun multiplicationTable(size: Int): Array<IntArray> {
-        var i = 0
-        return Array(size) {
-            var j = 0
-            i++
-            IntArray(size) {
-                i * ++j
-            }
-        }
-    }
+    fun multiplicationTable(size: Int) = Array(size) { x -> IntArray(size) { y -> (x + 1) * (y + 1) } }
 }
