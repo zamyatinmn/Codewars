@@ -1,10 +1,8 @@
-import fundamental.KataSolution
-import fundamental.reverseLetter
+import fundamental.tribonacci
 
 object Main {
     @JvmStatic
     fun main(args: Array<String>) {
-        println(reverseLetter("xbfghmgfd"))
-        println(reverseLetter("as!d24bd3f"))
+        println(tribonacci(doubleArrayOf(1.0, 1.0, 1.0), 10).contentToString())
     }
 }
