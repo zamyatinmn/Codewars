@@ -21,5 +21,5 @@ If you enjoyed this kata more advanced and generalized version of it can be foun
 
 fun tribonacci(signature: DoubleArray, n: Int) = signature
     .toMutableList()
-    .apply { repeat(n - size) { add(get(size - 1) + get(size - 2) + get(size - 3)) } }.take(n)
+    .apply { repeat(n - size) { add(takeLast(3).sum()) } }.take(n)
     .toDoubleArray()
