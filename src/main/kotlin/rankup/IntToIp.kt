@@ -20,4 +20,4 @@ Examples
 32         ==> "0.0.0.32"
 0          ==> "0.0.0.0"*/
 
-fun longToIP(ip: UInt) = "${ip shr 24 and 255u}.${ip shr 16 and 255u}.${ip shr 8 and 255u}.${ip and 255u}"
+fun longToIP(ip: UInt) = (24 downTo 0 step 8).map { ip shr it and 255u }.joinToString(".")
