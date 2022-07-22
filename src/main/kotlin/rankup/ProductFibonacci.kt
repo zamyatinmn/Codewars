@@ -1,12 +1,10 @@
 package rankup
 
 fun productFib(prod: Long): LongArray {
-    var num = 0L
-    var numNext = 1L
-    var product = 0L
-    while (product < prod) {
+    var (num, numNext, check) = longArrayOf(0, 1, 0)
+    while (check < prod) {
         num = numNext.also { numNext += num }
-        product = num * numNext
+        check = num * numNext
     }
-    return longArrayOf(num, numNext, if (product == prod) 1 else 0)
+    return longArrayOf(num, numNext, if (check == prod) 1 else 0)
 }
