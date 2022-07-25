@@ -1,8 +1,8 @@
-import rankup.productFib
+import fundamental.fireFight
 
 object Main {
     @JvmStatic
     fun main(args: Array<String>) {
-        println(productFib(4895).contentToString())
+        println(fireFight("Boat Rudder Mast Boat Hull Water Fire Boat Deck Hull Fire Propeller Deck Fire Deck Boat Mast"))
     }
 }
