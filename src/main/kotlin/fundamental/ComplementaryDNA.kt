@@ -14,16 +14,4 @@ Example: (input --> output)
 "ATTGC" --> "TAACG"
 "GTAT" --> "CATA"*/
 
-fun makeComplement(dna: String) = buildString {
-    dna.forEach {
-        append(
-            when (it) {
-                'A' -> 'T'
-                'T' -> 'A'
-                'C' -> 'G'
-                'G' -> 'C'
-                else -> it
-            }
-        )
-    }
-}
+fun makeComplement(dna: String) = dna.map { "ATGC".zip("TACG").toMap()[it] ?: it }.joinToString("")
