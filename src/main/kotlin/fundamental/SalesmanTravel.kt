@@ -33,16 +33,9 @@ Note:
 You can see a few addresses and zipcodes in the test cases.*/
 
 fun travel(r: String, zipcode: String) =
-    if (zipcode.length != 8 || !r.contains(zipcode)) "$zipcode:/" else buildString {
-        val numbers = mutableListOf<String>()
-        val addresses = mutableListOf<String>()
-        "(\\d+) (\\D+) ($zipcode)".toRegex().findAll(r).iterator().forEach {
-            numbers.add(it.groups[1]!!.value)
-            addresses.add(it.groups[2]!!.value)
-        }
-        append(zipcode)
-        append(":")
-        append(addresses.joinToString(","))
-        append("/")
-        append(numbers.joinToString(","))
+    if (zipcode.isEmpty()) "$zipcode:/" else buildString {
+        val matches = r.split(",").filter { it.endsWith(zipcode) }.map { it.replace(" $zipcode", "") }
+        val addresses = matches.joinToString(",") { it.substringAfter(" ") }
+        val numbers = matches.joinToString(",") { it.substringBefore(" ") }
+        append("$zipcode:$addresses/$numbers")
     }
