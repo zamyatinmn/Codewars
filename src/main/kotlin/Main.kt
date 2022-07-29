@@ -1,9 +1,8 @@
-import fundamental.hero
+import fundamental.meeting
 
 object Main {
     @JvmStatic
     fun main(args: Array<String>) {
-        println(hero(4, 2))
-        println(hero(5, 5))
+        println(meeting("Alex:Arno;Alissa:Cornwell;Sarah:Bell;Andrew:Dorries;Ann:Kern;Haley:Arno;Paul:Dorny;Madison:Kern"))
     }
 }
