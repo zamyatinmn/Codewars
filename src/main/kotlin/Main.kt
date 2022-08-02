@@ -1,8 +1,10 @@
-import fundamental.meeting
+import fundamental.persistence
 
 object Main {
     @JvmStatic
     fun main(args: Array<String>) {
-        println(meeting("Alex:Arno;Alissa:Cornwell;Sarah:Bell;Andrew:Dorries;Ann:Kern;Haley:Arno;Paul:Dorny;Madison:Kern"))
+        println(persistence(39))
+        println(persistence(999))
+        println(persistence(4))
     }
 }
