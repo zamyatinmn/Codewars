@@ -1,10 +1,9 @@
-import fundamental.persistence
+import fundamental.nbDig
 
 object Main {
     @JvmStatic
     fun main(args: Array<String>) {
-        println(persistence(39))
-        println(persistence(999))
-        println(persistence(4))
+        println(nbDig(10, 1))
+        println(nbDig(25, 1))
     }
 }
