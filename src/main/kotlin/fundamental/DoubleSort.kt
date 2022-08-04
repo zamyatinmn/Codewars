@@ -8,16 +8,6 @@ Your job is to return a single array that has first the numbers sorted in ascend
 Note that numbers written as strings are strings and must be sorted with the other strings.*/
 
 object DoubleSort {
-    fun dbSort(a: Array<Any>): Array<Any> {
-        val ints = mutableListOf<Int>()
-        val strings = mutableListOf<String>()
-        a.forEach {
-            if (it is Int) {
-                ints.add(it)
-            } else {
-                strings.add(it.toString())
-            }
-        }
-        return (ints.sorted() + strings.sorted()).toTypedArray()
-    }
+    fun dbSort(a: Array<Any>) =
+        (a.filterIsInstance<Int>().sorted() + a.filterIsInstance<String>().sorted()).toTypedArray()
 }
