@@ -1,11 +1,10 @@
-import fundamental.DoubleSort
+import fundamental.duplicateCount
 
 object Main {
     @JvmStatic
     fun main(args: Array<String>) {
-        println(
-            DoubleSort.dbSort(arrayOf("Apple", 46, "287", 574, "Peach", "3", "69", 78, "Grape", "423"))
-                .contentToString()
-        )
+        println(duplicateCount("abcde"))
+        println(duplicateCount("indivisibility"))
+        println(duplicateCount("Indivisibilities"))
     }
 }
