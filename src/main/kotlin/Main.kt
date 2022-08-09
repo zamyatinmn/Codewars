@@ -1,10 +1,11 @@
-import fundamental.duplicateCount
+import fundamental.abbrevName
 
 object Main {
     @JvmStatic
     fun main(args: Array<String>) {
-        println(duplicateCount("abcde"))
-        println(duplicateCount("indivisibility"))
-        println(duplicateCount("Indivisibilities"))
+        println(abbrevName("Vasya Pupkin"))
+        println(abbrevName("John Johnov"))
+        println(abbrevName("John J"))
+        println(abbrevName("John "))
     }
 }
