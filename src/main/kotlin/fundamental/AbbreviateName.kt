@@ -11,4 +11,4 @@ Sam Harris => S.H
 
 patrick feeney => P.F*/
 
-fun abbrevName(name: String) = name.split(" ").filter { it.isNotEmpty() }.joinToString(".") { it[0].uppercase() }
+fun abbrevName(name: String) = name.split(" ").joinToString(".") { it.take(1).uppercase() }
