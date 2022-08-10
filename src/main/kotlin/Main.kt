@@ -1,11 +1,9 @@
-import fundamental.abbrevName
+import fundamental.Solution
 
 object Main {
     @JvmStatic
     fun main(args: Array<String>) {
-        println(abbrevName("Vasya Pupkin"))
-        println(abbrevName("John Johnov"))
-        println(abbrevName("John J"))
-        println(abbrevName("John "))
+        println(Solution.nameValue(arrayOf("abc", "abc abc")).contentToString())
+        println(Solution.nameValue(arrayOf("codewars", "abc", "xyz")).contentToString())
     }
 }
