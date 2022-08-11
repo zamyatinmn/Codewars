@@ -17,9 +17,7 @@ there are 10 matches in the championship
 0 <= y <= 4*/
 
 fun points(games: List<String>) = games.map {
-    val a = it.split(":")
-    val x = a[0]
-    val y = a[1]
+    val (x, y) = it.split(":")
     when {
         x > y -> 3
         x == y -> 1
