@@ -20,9 +20,6 @@ foo099 -> foo100
 Attention: If the number has leading zeros the amount of digits should be considered.*/
 
 fun incrementString(str: String): String {
-    val sliceIndex = str.indexOfLast { it.isLetter() } + 1
-    val text = str.substring(0, sliceIndex)
-    val stringNumber = str.takeLastWhile { it.isDigit() }
-    val number = ((stringNumber.toIntOrNull() ?: 0) + 1).toString().padStart(stringNumber.length, '0')
-    return "$text$number"
+    val num = str.takeLastWhile { it.isDigit() }
+    return str.dropLast(num.length) + ((num.toIntOrNull() ?: 0) + 1).toString().padStart(num.length, '0')
 }
