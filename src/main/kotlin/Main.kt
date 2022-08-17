@@ -1,12 +1,10 @@
-import fundamental.incrementString
+import fundamental.catMouse
 
 object Main {
     @JvmStatic
     fun main(args: Array<String>) {
-        println(incrementString("foo09"))
-        println(incrementString("f845oo14"))
-        println(incrementString("54foo0154"))
-        println(incrementString("adasfsdf"))
-        println(incrementString("00099"))
+        println(catMouse("C....m"))
+        println(catMouse("C...m"))
+        println(catMouse("..C...m"))
     }
 }
