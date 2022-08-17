@@ -1,10 +1,8 @@
-import fundamental.catMouse
+import fundamental.grow
 
 object Main {
     @JvmStatic
     fun main(args: Array<String>) {
-        println(catMouse("C....m"))
-        println(catMouse("C...m"))
-        println(catMouse("..C...m"))
+        println(grow(intArrayOf(1, 2, 3)))
     }
 }
