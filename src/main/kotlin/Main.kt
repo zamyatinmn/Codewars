@@ -1,8 +1,9 @@
-import fundamental.grow
+import fundamental.rowSumOddNumbers
 
 object Main {
     @JvmStatic
     fun main(args: Array<String>) {
-        println(grow(intArrayOf(1, 2, 3)))
+        println(rowSumOddNumbers(3))
+        println(rowSumOddNumbers(5))
     }
 }
