@@ -14,4 +14,4 @@ Calculate the sum of the numbers in the nth row of this triangle (starting at in
 1 -->  1
 2 --> 3 + 5 = 8*/
 
-fun rowSumOddNumbers(n: Int) = (n * n + (n - 1)).let { (it downTo it - (n-1) * 2 step 2).sum() }
+fun rowSumOddNumbers(n: Int) = n * n * n
